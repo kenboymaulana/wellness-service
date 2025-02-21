@@ -47,8 +47,6 @@ export default class AuthService {
       },
     })
 
-    console.log(user)
-
     if (!user) {
       throw new BadRequestException('User not found!')
     }
@@ -68,21 +66,27 @@ export default class AuthService {
       sub: user.id,
     }
 
-    const TokenRefresh = this.jwtService.sign(
-      { id: user.id, email: user.email, full_name: user.full_name },
-      {
-        secret: this.configService.get<string>('JWT_SECRET_KEY_REFRESH'),
-        expiresIn: '7d',
-      },
-    )
-
-    await this.userService.update(user.id, { refresh_token: TokenRefresh })
-
     return {
       user: userData,
       access_token: this.jwtService.sign(payload),
-      refresh_token: TokenRefresh,
+      refresh_token: '',
     }
+
+    // const TokenRefresh = this.jwtService.sign(
+    //   { id: user.id, email: user.email, full_name: user.full_name },
+    //   {
+    //     secret: this.configService.get<string>('JWT_SECRET_KEY_REFRESH'),
+    //     expiresIn: '7d',
+    //   },
+    // )
+
+    // await this.userService.update(user.id, { refresh_token: TokenRefresh })
+
+    // return {
+    //   user: userData,
+    //   access_token: this.jwtService.sign(payload),
+    //   refresh_token: TokenRefresh,
+    // }
   }
 
   async loginWithPhone(
