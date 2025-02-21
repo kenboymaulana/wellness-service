@@ -1,4 +1,6 @@
 {
+    "installCommand": "npm install --force",
+    "buildCommand": "nest build",
     "version": 2,
     "builds": [
         {
@@ -12,7 +14,5 @@
             "dest": "src/main.ts",
             "methods": ["GET", "POST", "PUT", "DELETE"]
         }
-    ],
-    "installCommand": "npm install --force",
-    "buildCommand": "nest build"
+    ]
 }
