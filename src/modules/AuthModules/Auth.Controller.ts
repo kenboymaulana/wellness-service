@@ -136,6 +136,7 @@ export default class AuthController {
     //     authDto.access_token,
     //   )
     // } else if (authDto.grant_type === GrantType.EMAIL) {
+    console.log(authDto)
     const data = await this.authService.loginWithEmail(
       authDto.email,
       authDto.password,

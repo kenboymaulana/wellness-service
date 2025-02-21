@@ -47,6 +47,8 @@ export default class AuthService {
       },
     })
 
+    console.log(user)
+
     if (!user) {
       throw new BadRequestException('User not found!')
     }
