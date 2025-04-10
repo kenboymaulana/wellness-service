@@ -1,0 +1,1 @@
+{"version":3,"file":"CheckPermission.Dto.js","sourceRoot":"","sources":["../../../src/modules/CheckPermission/CheckPermission.Dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAA8C;AAC9C,qDAAuD;AAEvD,MAAa,yBAAyB;CAQrC;AADG;IANC,IAAA,qBAAW,EAAC;QACT,QAAQ,EAAE,IAAI;QACd,IAAI,EAAE,QAAQ;QACd,IAAI,EAAE,YAAY;KACnB,CAAC;IACH,IAAA,0BAAQ,GAAE;;6DACO;AAPtB,8DAQC"}
