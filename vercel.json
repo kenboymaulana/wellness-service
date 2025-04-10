@@ -1,6 +1,8 @@
 {
-    "installCommand": "npm install --force",
-    "buildCommand": "nest build",
+    "build": {
+        "installCommand": "npm install --force",
+        "command": "npm run build"
+    },
     "version": 2,
     "builds": [
         {
