@@ -32,15 +32,15 @@ export abstract class BaseEntityUuid {
   @Exclude()
   deleted_by: string
 
-  @CreateDateColumn()
+  @CreateDateColumn({ nullable: true })
   @Exclude()
   created_at: Date
 
-  @UpdateDateColumn({ onUpdate: 'CURRENT_TIMESTAMP(6)' })
+  @UpdateDateColumn({ nullable: true })
   @Exclude()
   updated_at: Date
 
-  @DeleteDateColumn()
+  @DeleteDateColumn({ nullable: true })
   @Exclude()
   deleted_at: Date
 }

@@ -43,17 +43,17 @@ __decorate([
     __metadata("design:type", String)
 ], BaseEntityUuid.prototype, "deleted_by", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)(),
+    (0, typeorm_1.CreateDateColumn)({ nullable: true }),
     (0, class_transformer_1.Exclude)(),
     __metadata("design:type", Date)
 ], BaseEntityUuid.prototype, "created_at", void 0);
 __decorate([
-    (0, typeorm_1.UpdateDateColumn)({ onUpdate: 'CURRENT_TIMESTAMP(6)' }),
+    (0, typeorm_1.UpdateDateColumn)({ nullable: true }),
     (0, class_transformer_1.Exclude)(),
     __metadata("design:type", Date)
 ], BaseEntityUuid.prototype, "updated_at", void 0);
 __decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
+    (0, typeorm_1.DeleteDateColumn)({ nullable: true }),
     (0, class_transformer_1.Exclude)(),
     __metadata("design:type", Date)
 ], BaseEntityUuid.prototype, "deleted_at", void 0);
